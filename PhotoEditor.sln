@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31613.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{C7167F0D-BC9F-4E6E-AFE1-012C56B48DB5}") = "PhotoEditor (Package)", "PhotoEditor\PhotoEditor (Package)\PhotoEditor (Package).wapproj", "{4723D910-999D-4C5A-8C49-2BED08C19051}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PhotoEditor", "PhotoEditor\PhotoEditor\PhotoEditor.vcxproj", "{E1D09C72-3F32-4B51-B7E1-ADB35424679F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|arm64 = Debug|arm64
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|arm64 = Release|arm64
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4723D910-999D-4C5A-8C49-2BED08C19051}.Debug|arm64.ActiveCfg = Debug|arm64
+		{4723D910-999D-4C5A-8C49-2BED08C19051}.Debug|arm64.Build.0 = Debug|arm64
+		{4723D910-999D-4C5A-8C49-2BED08C19051}.Debug|arm64.Deploy.0 = Debug|arm64
+		{4723D910-999D-4C5A-8C49-2BED08C19051}.Debug|x64.ActiveCfg = Debug|x64
+		{4723D910-999D-4C5A-8C49-2BED08C19051}.Debug|x64.Build.0 = Debug|x64
+		{4723D910-999D-4C5A-8C49-2BED08C19051}.Debug|x64.Deploy.0 = Debug|x64
+		{4723D910-999D-4C5A-8C49-2BED08C19051}.Debug|x86.ActiveCfg = Debug|x86
+		{4723D910-999D-4C5A-8C49-2BED08C19051}.Debug|x86.Build.0 = Debug|x86
+		{4723D910-999D-4C5A-8C49-2BED08C19051}.Debug|x86.Deploy.0 = Debug|x86
+		{4723D910-999D-4C5A-8C49-2BED08C19051}.Release|arm64.ActiveCfg = Release|arm64
+		{4723D910-999D-4C5A-8C49-2BED08C19051}.Release|arm64.Build.0 = Release|arm64
+		{4723D910-999D-4C5A-8C49-2BED08C19051}.Release|arm64.Deploy.0 = Release|arm64
+		{4723D910-999D-4C5A-8C49-2BED08C19051}.Release|x64.ActiveCfg = Release|x64
+		{4723D910-999D-4C5A-8C49-2BED08C19051}.Release|x64.Build.0 = Release|x64
+		{4723D910-999D-4C5A-8C49-2BED08C19051}.Release|x64.Deploy.0 = Release|x64
+		{4723D910-999D-4C5A-8C49-2BED08C19051}.Release|x86.ActiveCfg = Release|x86
+		{4723D910-999D-4C5A-8C49-2BED08C19051}.Release|x86.Build.0 = Release|x86
+		{4723D910-999D-4C5A-8C49-2BED08C19051}.Release|x86.Deploy.0 = Release|x86
+		{E1D09C72-3F32-4B51-B7E1-ADB35424679F}.Debug|arm64.ActiveCfg = Debug|arm64
+		{E1D09C72-3F32-4B51-B7E1-ADB35424679F}.Debug|arm64.Build.0 = Debug|arm64
+		{E1D09C72-3F32-4B51-B7E1-ADB35424679F}.Debug|x64.ActiveCfg = Debug|x64
+		{E1D09C72-3F32-4B51-B7E1-ADB35424679F}.Debug|x64.Build.0 = Debug|x64
+		{E1D09C72-3F32-4B51-B7E1-ADB35424679F}.Debug|x86.ActiveCfg = Debug|Win32
+		{E1D09C72-3F32-4B51-B7E1-ADB35424679F}.Debug|x86.Build.0 = Debug|Win32
+		{E1D09C72-3F32-4B51-B7E1-ADB35424679F}.Release|arm64.ActiveCfg = Release|arm64
+		{E1D09C72-3F32-4B51-B7E1-ADB35424679F}.Release|arm64.Build.0 = Release|arm64
+		{E1D09C72-3F32-4B51-B7E1-ADB35424679F}.Release|x64.ActiveCfg = Release|x64
+		{E1D09C72-3F32-4B51-B7E1-ADB35424679F}.Release|x64.Build.0 = Release|x64
+		{E1D09C72-3F32-4B51-B7E1-ADB35424679F}.Release|x86.ActiveCfg = Release|Win32
+		{E1D09C72-3F32-4B51-B7E1-ADB35424679F}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {37EEFC43-E359-4E40-A1B4-EE427B1CE171}
+	EndGlobalSection
+EndGlobal
