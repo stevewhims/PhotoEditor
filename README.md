@@ -54,7 +54,7 @@ In your target *Package* project in Visual Studio, in **Solution Explorer**, exp
 
 **Photo** is a runtime class that represents a photo. It's a *model* (in the sense of models, views, and viewmodels).
 
-### Copy source code files
+### Copy **Photo** source code files
 
 In your clone of the source project, in **File Explorer**, locate the folder **Windows-appsample-photo-editor** > **PhotoEditor**. In that folder you'll find the three source code files `Photo.idl`, `Photo.h`, and `Photo.cpp`; those files together implement the **Photo** runtime class. Select those three files, and copy them to the clipboard.
 
@@ -78,7 +78,7 @@ And replace it with this:
 
 Repeat that for `Photo.cpp`.
 
-### Port source code
+### Port **Photo** source code
 
 In `Photo.idl`, search for `Windows.UI.Xaml` (which is the namespace for UWP XAML), and change that to `Microsoft.UI.Xaml` (which is the namespace for WinUI XAML).
 
@@ -208,7 +208,7 @@ To support code in **DetailPage**, the source project has a dependency on [Win2D
 * In the target solution in Visual Studio, click **Tools** > **NuGet Package Manager** > **Manage NuGet Packages for Solution...** > **Browse**, check **Include prerelease**, and type or paste *Microsoft.WindowsAppSDK.DWrite*. Select the *1.0.0-experimental1* item in search results, check the PhotoEditor *Desktop* project, and click **Install** to install the package into that project.
 * Repeat those steps for the *Microsoft.Graphics.Win2D* NuGet package. You won't need to check **Include prerelease**, and its version will be *0.8.2.23*, or something similar to that.
 
-### Copy source code files
+### Copy **DetailPage** source code files
 
 In your clone of the source project, in **File Explorer**, locate the folder **Windows-appsample-photo-editor** > **PhotoEditor**. In that folder you'll find the four source code files `DetailPage.idl`, `DetailPage.xaml`, `DetailPage.h`, and `DetailPage.cpp`; those files together implement the **DetailPage** view. Select those four files, and copy them to the clipboard.
 
@@ -232,7 +232,7 @@ And replace it with this:
 </Midl>
 ```
 
-### Port source code
+### Port **DetailPage** source code
 
 In `DetailPage.idl`, search for `Windows.UI.Xaml`, and change that to `Microsoft.UI.Xaml`.
 
@@ -269,7 +269,7 @@ Confirm that you can build the target solution (but don't run yet).
 
 The main page of the app represents the view that you see first when you run the app. It's the page that loads the photos from the **Pictures Library**, and displays a tiled thumbnail view.
 
-### Copy source code files
+### Copy **MainPage** source code files
 
 Just like you did with **DetailPage**, copy over `MainPage.idl`, `MainPage.xaml`, `MainPage.h`, and `MainPage.cpp`. Rename the `.h` and `.cpp` files to `.xaml.h` and `.xaml.cpp`, respectively. Include all four files in the target *Desktop* project.
 
@@ -287,7 +287,7 @@ With:
 </Midl>
 ```
 
-### Port source code
+### Port **MainPage** source code
 
 In `MainPage.idl`, search for `Windows.UI.Xaml`, and change both occurrences to `Microsoft.UI.Xaml`.
 
@@ -338,7 +338,7 @@ Confirm that you can build the target solution (but don't run yet).
 
 ### ImageProperties
 
-See GitHub issue [StorageItemContentProperties.GetImagePropertiesAsync causes an access violation when the same code works fine in the UWP version](https://github.com/microsoft/WindowsAppSDK/issues/1141). Fron that issue, https://microsoft.visualstudio.com/OS/_workitems/edit/35008809 was created, but that's now resolved external, so I need to follow up about that.
+See GitHub issue [StorageItemContentProperties.GetImagePropertiesAsync causes an access violation when the same code works fine in the UWP version](https://github.com/microsoft/WindowsAppSDK/issues/1141). From that issue, https://microsoft.visualstudio.com/OS/_workitems/edit/35008809 was created.
 
 To get the app to run without crashing, it's necessary to make the following changes. These are not an expected part of the port, so I'm hoping either a) to understand why they're necessary, or b) for them to be fixed in a future release, and so we can remove this section.
 
@@ -424,4 +424,4 @@ Confirm that you can build again (but don't run yet).
 
 Copy the contents of `Photo.h` and `.cpp` from the source project into the target project.
 
-From here, the remaining steps to port the code that you copied are the same as those given in the **Port source code** subsection within [Port the **Photo** model](#port-the-photo-model).
+From here, the remaining steps to port the code that you copied are the same as those given in the [Port **Photo** source code](#port-photo-source-code) section.
