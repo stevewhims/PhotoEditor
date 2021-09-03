@@ -342,7 +342,8 @@ See GitHub issue [StorageItemContentProperties.GetImagePropertiesAsync causes an
 
 To get the app to run without crashing, it's necessary to make the following changes. These are not an expected part of the port, so I'm hoping either a) to understand why they're necessary, or b) for them to be fixed in a future release, and so we can remove this section.
 
-MainPage.xaml.cpp:
+```cppwinrt
+// MainPage.xaml.cpp:
     // Creates a Photo from Storage file for adding to Photo collection.
     IAsyncOperation<PhotoEditor::Photo> MainPage::LoadImageInfoAsync(StorageFile file)
     {
@@ -351,7 +352,7 @@ MainPage.xaml.cpp:
         co_return info;
     }
 
-Photo.cpp:
+// Photo.cpp:
     hstring Photo::ImageDimensions() const
     {
         return L"Not implemented";
@@ -372,14 +373,14 @@ Photo.cpp:
         //}
     }
 
-Photo.h:
+// Photo.h:
     hstring ImageTitle() const
     {
         return m_imageName;
         // return m_imageProperties.Title() == L"" ? m_imageName : m_imageProperties.Title();
     }
 
-DetailPage.xaml.cpp (and change return type in .idl and .h)
+// DetailPage.xaml.cpp (and change return type in .idl and .h)
     IAsyncAction DetailPage::FitToScreen()
     {
         auto properties = co_await Item().ImageFile().Properties().GetImagePropertiesAsync();
@@ -388,6 +389,7 @@ DetailPage.xaml.cpp (and change return type in .idl and .h)
         auto ZoomFactor = static_cast<float>(std::min(a, b));
         MainImageScroller().ChangeView(nullptr, nullptr, ZoomFactor);
     }
+```
 
 ## Test the ported app
 
